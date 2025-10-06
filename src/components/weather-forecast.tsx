@@ -53,7 +53,7 @@ const WeatherForecast = ({ data }: WeatherForecastProps) => {
           {nextDays.map((day) => (
             <div
               key={day.date}
-              className="grid grid-cols-3 items-center gap-4 rounded-lg border p-4"
+              className="grid grid-cols-3 items-center gap-4 rounded-lg border p-4 bg-neutral-50 dark:bg-neutral-700"
             >
               <div>
                 <p className="font-medium">
