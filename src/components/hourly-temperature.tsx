@@ -14,7 +14,7 @@ interface HourlyTemperatureProps {
   data: ForecastData;
 }
 const HourlyTemperature = ({ data }: HourlyTemperatureProps) => {
-  const chartData = data.list.slice(0.8).map((item) => ({
+  const chartData = data.list.slice(0, 5).map((item) => ({
     time: format(new Date(item.dt * 1000), "ha"),
     temp: Math.round(item.main.temp),
     feels_like: Math.round(item.main.feels_like),
