@@ -100,9 +100,12 @@ const WeatherDashboard = () => {
         size={"icon"}
         onClick={handleRefresh}
         disabled={weatherQuery.isFetching || forecastQuery.isFetching}
+        className="shadow-[inset_0_1px_2px_#ffffff30,0_1px_2px_#00000030,0_2px_4px_#00000015] dark:shadow-[inset_0_1px_2px_#ffffff30,0_1px_2px_#00000030,0_2px_4px_#00000015]"
       >
         <RefreshCw
-          className={`h-4 w-4 ${weatherQuery.isFetching ? "animate-spin" : ""}`}
+          className={`h-4 w-4 ${
+            weatherQuery.isFetching ? "animate-spin" : ""
+          } `}
         />
       </Button>
       <div className="grid gap-6">

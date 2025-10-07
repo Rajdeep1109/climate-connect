@@ -39,7 +39,7 @@ const CitySearch = () => {
       <Button
         onClick={() => setOpen(true)}
         variant="outline"
-        className="relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64"
+        className="relative w-full justify-start text-sm text-muted-foreground sm:pr-12 md:w-40 lg:w-64 dark:shadow-[inset_0_1px_2px_#ffffff50,0_2px_4px_#00000030,0_4px_8px_#00000015] shadow-[inset_0_1px_2px_#ffffff30,0_1px_2px_#00000030,0_2px_4px_#00000015]"
       >
         <Search className="mr-2 h-4 w-4" />
         Search cities
@@ -54,9 +54,7 @@ const CitySearch = () => {
           {query.length > 2 && !isLoading && (
             <CommandEmpty>No cities found.</CommandEmpty>
           )}
-          <CommandGroup heading="Favorites">
-            <CommandItem>Calendar</CommandItem>
-          </CommandGroup>
+          <CommandGroup heading="Favorites"></CommandGroup>
 
           <CommandSeparator />
           {history.length > 0 && (
